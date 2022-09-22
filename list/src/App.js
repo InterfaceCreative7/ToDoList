@@ -1,10 +1,14 @@
-import React from "react";
-import SetInput from "./component/SetInput"
+import Dates from "./component/Dates.js"
+import Weather from "./component/Weather.js";
+
+
+
 function App() {
   return (
-   <div>
-    <SetInput/>
-   </div>
+    <div>
+      <Dates />
+      <Weather />
+    </div>
   );
 }
 
