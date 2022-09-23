@@ -4,6 +4,7 @@ const TodoItem=(props)=>{
     return(
         <div>
             {props.item}
+            <button>삭제</button>
         </div>
     )
 }
