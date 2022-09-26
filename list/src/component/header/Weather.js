@@ -1,4 +1,5 @@
 import { useState } from "react"
+import classes from "./Weather.module.css"
 
 const Weather = () => {
     const [curWeather, serCurWeather] = useState();
@@ -9,6 +10,7 @@ const Weather = () => {
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}&unit=metric`
         fetch(url).then(res => res.json()
             .then(data => {
+                console.log(data.weather[0])
                 serCurWeather(data.weather[0].main)
             }))
     }
@@ -17,7 +19,7 @@ const Weather = () => {
     }
     navigator.geolocation.getCurrentPosition(success, error);
     return (
-        <div>
+        <div className={classes.weather}>
             {curWeather}
         </div>
     )

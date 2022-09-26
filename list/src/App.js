@@ -1,14 +1,13 @@
-import Dates from "./component/Dates.js"
-import Weather from "./component/Weather.js";
-import SetInput from "./component/SetInput.js"
+import Header from "./component/header/Header.js"
+import SetInput from "./component/footer/SetInput.js"
+import classes from "./App.module.css"
 
 
 function App() {
   return (
-    <div>
-      <Dates />
-      <Weather />
-    <SetInput/>
+    <div className={classes.main}>
+      <Header />
+      <SetInput />
     </div>
   );
 }
