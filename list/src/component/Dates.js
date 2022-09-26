@@ -11,7 +11,7 @@ const Dates = () => {
     return (
         <div>
             {year}년&nbsp;
-            {month}월&nbsp;
+            {month+1}월&nbsp;
             {date}일&nbsp;
             {week[day]}
         </div>

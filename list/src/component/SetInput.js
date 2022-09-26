@@ -6,7 +6,7 @@ const Input=()=>{
 
     const [value,setValue]=useState('');
     const [info,updateInfo]=useState([]);
-
+    const [count,setCount]=useState(0);
     const onChange=(e)=>{
         setValue(e.target.value); //value에 담김
     }
@@ -14,6 +14,7 @@ const Input=()=>{
     const onClick=(event)=>{
         event.preventDefault();
         updateInfo([...info,value]);
+        setCount(count+1);
         
 
     }
@@ -21,7 +22,7 @@ const Input=()=>{
 
     return(
         <div>
-        <h3>할 일 입력</h3>
+        <h3>할 일 입력:{count}개</h3>
         <input onChange={onChange} ></input>
         <button onClick={onClick}>추가</button>
         <UpdateList todoList={info}/>
